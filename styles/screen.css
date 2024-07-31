@@ -1,0 +1,142 @@
+@media (min-width: 1581px) {
+
+    /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+a{
+    color: #ffffff;
+    text-decoration: none;
+  }    
+* {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        font-family: Kanit;
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+    }
+
+    header {
+        padding-top: 1%;
+        padding-left: 1%;
+    }
+
+    #log_out {
+        background-color: rgb(197, 51, 51);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        width: 6rem;
+        height: 2rem;
+        color: white;
+    }
+
+    #log_out:hover {
+        background-color: rgb(216, 81, 48);
+    }
+
+    header1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        max-width: 97.9%;
+        /* หรือค่าที่ต้องการ */
+        margin: 0 auto;
+        /* จัดกลาง */
+        padding: 20px;
+        
+
+    }
+
+    section {
+        padding: 10%;
+    }
+
+    .rule {
+        max-width: 150rem;
+    }
+
+    .text {
+        padding-bottom: 5px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        width: 55%;
+        margin: auto;
+
+    }
+
+    .info1,
+    .info2 {
+        background-color: rgba(255, 255, 255, 0.5);
+        /* สีแดงโปร่งใส 50% */
+        border: solid 1px;
+        border-radius: 5px;
+        padding-inline: 1%;
+        padding: 3%;
+        margin: 10px;
+    }
+
+    .infomain {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .infopic,
+    .main-content {
+        padding-top: 2%;
+    }
+    #pressure {
+        width: 40%;
+    }
+    .func_button {
+        padding: 15px;
+
+    }
+
+    .but1,
+    .but2,
+    .but3 {
+        font-size: 20px;
+        margin: 10px;
+        width: 150px;
+        height: 50px;
+        background-color: #3498db;
+        color: white;
+        border: 1px white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .but1:hover,
+    .but2:hover,
+    .but3:hover {
+        background-color: #6bb5e6;
+    }
+
+    
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,132 @@
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 376px) and (max-width: 400px)  and (max-height: 897px){
+  a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  * {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  body {
+    font-family: Kanit;
+    background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+  }
+
+  header {
+    padding-top: 2%;
+    padding-left: 2%;
+    font-size: 0.5rem;
+  }
+
+  #log_out {
+    background-color: rgb(197, 51, 51);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 5.2rem;
+    height: 2rem;
+    color: white;
+  }
+
+  #log_out:hover {
+    background-color: rgb(216, 81, 48);
+  }
+
+  header1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #logolong {
+    width: 80%;
+    height: auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  caution {
+    font-size: 0.5rem;
+  }
+
+  .info {
+    text-align: center;
+    font-size: 0.9rem;
+    width: 80%;
+  }
+
+  .info1,
+  .info2 {
+    font-size: 0.7em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 1px;
+    border-radius: 5px;
+    padding-inline: 1%;
+    padding: 3%;
+    margin: 10px;
+  }
+
+  .infomain {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .infopic,
+  .main-content {
+    padding-top: 2%;
+  }
+
+  #pressure {
+    padding-left: 5%;
+    width: 50%;
+  }
+
+  section {
+    font-size: 0.7rem;
+  }
+  .rule{
+    max-width: 10rem;
+  }
+
+  .func_button {
+    padding: 15px;
+    padding-top: 25%;
+  }
+
+  .but1,
+  .but2,
+  .but3 {
+    margin: 3px;
+    width: 5.5rem;
+    height: 3rem;
+    background-color: #3498db;
+    color: white;
+    border: 1px white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  footer{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+  }
+}
