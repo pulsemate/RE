@@ -1,0 +1,221 @@
+@media only screen and (min-width: 350px) and (max-width: 428px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        margin: 0;
+        font-size: 18px; /* Decreased font size */
+        font-family: Kanit;
+        overflow: hidden;
+    }
+
+    #container {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 30px; /* Decreased padding */
+        border-radius: 30px; /* Decreased border-radius */
+        text-align: center;
+        position: fixed;
+        top: 25%; /* Adjusted position */
+    }
+
+    #form_container {
+        width: 90%; /* Decreased width */
+        max-width: 300px; /* Decreased max-width */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Decreased gap */
+    }
+
+    #welcomee {
+        font-size: 150%; /* Decreased font size */
+        margin-bottom: 5px; /* Adjusted margin for some separation */
+    }
+
+    #welcome {
+        font-size: 18px; /* Decreased font size */
+        margin-top: 1px; /* Adjusted margin for more separation */
+    }
+
+    #form_container label {
+        font-size: 20px; /* Decreased font size */
+    }
+
+    #form_container input {
+        padding: 8px; /* Decreased padding */
+        font-size: 16px; /* Decreased font size */
+        width: 100%; /* Adjusted width */
+        font-family: Kanit;
+        border: 1px solid #ccc;
+        border-radius: 6px; /* Decreased border-radius */
+        position: relative;
+        right: 4%;
+    }
+
+    #button_container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px; /* Decreased margin-top */
+        transform: scale(1.3); /* Adjusted scale factor */
+    }
+
+    #img1 {
+        width: 90%; /* Decreased width */
+        height: 30%; /* Decreased height */
+        position: fixed;
+        bottom: 60%; /* Adjusted position */
+        left: 5%; /* Adjusted position */
+    }
+}
+
+/* iPad */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        margin: 0;
+        font-size: 18px; /* Decreased font size */
+        font-family: Kanit;
+    }
+
+    #container {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 20px; /* Decreased padding */
+        border-radius: 20px; /* Decreased border-radius */
+        text-align: center;
+        backdrop-filter: blur(8px); /* Decreased blur value */
+        position: fixed;
+        top: 30%; /* Adjusted position */
+    }
+
+    #form_container {
+        width: 90%; /* Decreased width */
+        max-width: 400px; /* Decreased max-width */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh; /* Further decreased gap */
+    }
+
+    #welcomee {
+        font-size: 2em; /* Adjusted font size */
+        margin-bottom: 3px; /* Adjusted margin for some separation */
+    }
+
+    #welcome {
+        font-size: 1.8em; /* Adjusted font size */
+        margin-top: 1px; /* Adjusted margin for more separation */
+    }
+
+    #form_container input {
+        padding: 12px; /* Further decreased padding */
+        font-size: 130%; /* Adjusted font size */
+        width: 100%; /* Adjusted width */
+        font-family: Kanit;
+        border: 1px solid #ccc;
+        border-radius: 6px; /* Decreased border-radius */
+        position: relative;
+        right: 4%;
+    }
+
+    #signin-link-container {
+        font-size: 130%; /* Adjusted font size */
+    }
+
+    #button_container {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px; /* Decreased margin-top */
+        transform: scale(1.8); /* Adjusted scale factor */
+    }
+
+    #img1 {
+        width: 85%; /* Adjusted width */
+        height: 30%; /* Adjusted height */
+        position: fixed;
+        bottom: 60%; /* Adjusted position */
+        left: 10%; /* Adjusted position */
+    }
+}
+
+/* Horizontal iPad */
+@media only screen and (min-width: 1024px) and (max-width: 1369px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        margin: 0;
+        font-size: 16px; /* Adjusted font size */
+        font-family: Kanit;
+        
+    }
+
+    #container {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 20px; /* Adjusted padding */
+        border-radius: 20px; /* Adjusted border-radius */
+        text-align: center;
+        backdrop-filter: blur(8px); /* Adjusted blur value */
+        position: fixed;
+        top: 30%; /* Adjusted position */
+    }
+
+    #form_container {
+        width: 90%; /* Adjusted width */
+        max-width: 400px; /* Adjusted max-width */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh; /* Adjusted gap */
+    }
+
+    #welcomee {
+        font-size: 1.8em; /* Adjusted font size */
+        margin-bottom: 2px; /* Adjusted margin for some separation */
+    }
+
+    #welcome {
+        font-size: 1.6em; /* Adjusted font size */
+        margin-top: 1px; /* Adjusted margin for more separation */
+    }
+
+    #form_container input {
+        padding: 12px; /* Adjusted padding */
+        font-size: 130%; /* Adjusted font size */
+        width: 100%; /* Adjusted width */
+        font-family: Kanit;
+        border: 1px solid #ccc;
+        border-radius: 6px; /* Adjusted border-radius */
+        position: relative;
+        right: 4%;
+    }
+
+    #signin-link-container {
+        font-size: 130%; /* Adjusted font size */
+    }
+
+    #button_container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px; /* Adjusted margin-top */
+        transform: scale(1.8); /* Adjusted scale factor */
+    }
+
+    #img1 {
+        width: 50%; /* Adjusted width */
+        height: 40%; /* Adjusted height */
+        position: fixed;
+        bottom: 60%; /* Adjusted position */
+        left: 25%; /* Adjusted position */
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="../register/register.css">
+    <link rel="stylesheet" href="../register/registerphone (1).css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Pic/favicon2.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="container">
+        <div id="form_container">
+            <!-- Registration form elements go here -->
+            <label for="">อีเมลล์</label><input placeholder="อีเมลล์" type="text" id="email" />
+            <label for="">รหัสผ่าน</label><input placeholder="รหัสผ่าน" type="password" id="password" />
+            <label for="">ชื่อ</label><input placeholder="ชื่อจริง" type="text" id="name" />
+            <label for="">นามสกุล</label><input placeholder="นามสกุล" type="text" id="surname" />
+
+
+            <div class="form-row">
+                <div class="column">
+                    <label for="">น้ำหนัก</label><input placeholder="น้ำหนัก" type="text" id="weight" />
+                    <label for="">เบอร์โทร</label><input placeholder="เบอร์โทร" type="text" id="tel" />
+
+                </div>
+                <div class="column">
+                    <label for="">ส่วนสูง</label><input placeholder="ส่วนสูง" type="text" id="height" />
+                    <label for="">อายุ</label><input placeholder="อายุ" type="text" id="age" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="column">
+                    <label>เพศ</label>
+                    <div class="gender-row">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            ชาย
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            หญิง
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <label for="">โรคประจำตัว</label><input placeholder="โรตประจำตัว" type="text" id="ill" />
+        </div>
+        <div id="button_container">
+            <button id="register" onclick="register()"> ลงทะเบียน </button>
+        </div>
+        <div id="signin-link-container">
+            <p>หากมีบัญชีอยู่แล้ว <a href="../index.html">เข้าสู่ระบบ</a></p>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- Your Firebase Configuration -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBGGdqJxgpT5PZQnigaVFS-OfMD-jJxjGQ",
+            authDomain: "authentication-app-2043f.firebaseapp.com",
+            databaseURL: "https://authentication-app-2043f-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "authentication-app-2043f",
+            storageBucket: "authentication-app-2043f.appspot.com",
+            messagingSenderId: "1083690050567",
+            appId: "1:1083690050567:web:6c79d9fcd23a626b56f6a2",
+            measurementId: "G-FTR73XSRW6"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your register.js script -->
+    <script src="../register/register.js"></script>
+</body>
+
+</html>

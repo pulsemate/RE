@@ -1,5 +1,5 @@
 /* ipad ipadmini */
-@media (min-width: 1023px) and (max-width: 1024px) and (max-height :800px){
+@media (min-width: 1024px) and (max-height :800px){
   a{
     color: #ffffff;
     text-decoration: none;
@@ -10,10 +10,12 @@
         padding: 0;
     
       }
-    
+    html{
+    background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+
+} 
       body {
         font-family: Kanit;
-        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
       }
       header {
         padding-top: 2%;

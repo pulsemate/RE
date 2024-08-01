@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseMate</title>
+    <link rel="stylesheet" href="../main/styles/mobileS.css">
+    <link rel="stylesheet" href="../main/styles/mobileM.css">
+    <link rel="stylesheet" href="../main/styles/mobileL.css">
+    <link rel="stylesheet" href="../main/styles/ipad_ipadmini_ipadair_ipadpro_Port.css">
+    <link rel="stylesheet" href="../main/styles/ipad_ipadmini_ipadair_ipadpro_land.css">
+    <link rel="stylesheet" href="../main/styles/laptopS.css">
+    <link rel="stylesheet" href="../main/styles/laptopM.css">
+    <link rel="stylesheet" href="../main/styles/screen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- ส่วนนี้ต้องแก้ใช้ firebase เข้ามาช่วย -->
+        <h1 id="user-info">ยินดีต้อนรับคุณ:</h1>
+        <button id="log_out" onclick="logout()">ออกจากระบบ</button>
+    </header>
+    <header1>
+        <img src="../pics/logo_long.png" id="logolong">
+        <caution>
+            <h1>ข้อมูลเตรียมตัวก่อนวัดความดัน</h1>
+        </caution>
+    </header1>
+
+    <main>
+
+        <div class="info">
+            <div class="info1">
+                <h2 class="text">การวัดตอนเช้า</h2>
+                <p>วัดช่วงเช้า วัดความดันภายใน 1 ชั่วโมง <br>หลังตื่นนอน และปัสสาวะแล้ว จำนวน 2 ครั้ง <br>ติดกัน ห่างกันครั้งละ 1 นาที</p>
+            </div>
+            <div class="info2">
+                <h2 class="text">การวัดก่อนเข้านอน</h2>
+                <p>วัดช่วงเวลาก่อนเข้านอน วัดความดัน 2 ครั้ง <br>
+                    ติดกันห่างกันครั้งละ 1 นาที</p>
+            </div>
+        </div>
+        <div class="infomain">
+            
+                <img src="../pics/infopic.png" id="pressure">
+            
+            <div class="main-content">
+                <section>
+                    <p class="rule">
+                        <h2>ทำการวัดดังนี้</h2>
+                        ● นั่งเก้าอี้ให้หลังพิงพนักและหลังตรง 
+                        <br>● เท้าวางราบกับพื้นไม่ไขว่ห้าง 
+                        <br>● วางแขนในระดับเดียวกับหัวใจ 
+                        <br>● ขณะวัดความดันโลหิตไม่กำมือ ไม่พุดคุย หรือ ขยับตัว
+                        <br> ● ก่อนทำการวัด นั่งพักอย่างผ่อนคลาย
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="func_button">
+            <button class="but1" onclick="window.location.href='https://docs.google.com/spreadsheets/d/19cK4hnIc2ogopwfOPtSvilSX4G2foOFJRCCcUML3ljA/edit?gid=1430195560#gid=1430195560'">ข้อมูลย้อนหลัง</button>
+            <button class="but2" onclick="window.location.href='../dashboard/dashboard.html'">วัดความดัน</button>
+            <button class="but3" onclick="window.location.href='../about'">เกี่ยวกับเรา</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; PulseMate By KMITL IoTe group</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- Your Firebase Configuration -->
+    <script src="../main/main.js"></script>
+
+    <!-- Your signin.js script -->
+    <script src="../main/display.js"></script>
+
+    <script>
+        // Additional error logging for debugging
+        console.log("Firebase initialized on dashboard.html");
+
+        // Listen for changes in the user's sign-in state
+        firebase.auth().onAuthStateChanged(function (user) {
+            // Call the function to display user information
+            displayUserInfo(user);
+        });
+    </script>
+
+    <script>
+        // Function to handle logout
+        function logout() {
+            firebase.auth().signOut().then(function () {
+                // Sign-out successful.
+                // alert('ออกจากระบบสำเร็จ');
+                // Redirect to signin.html after successful logout
+                window.location.href = '../index.html';
+            }).catch(function (error) {
+                // An error happened.
+                console.error('Logout failed:', error);
+                alert('Logout failed: ' + error.message);
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+/* register.css */
+@media only screen and (min-width: 1536px) and (max-width:1550px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* Ensures the background covers the entire viewport */
+        height: 100vh;
+        font-family: Kanit;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #form_container {
+
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+        width: 70%;
+        max-width: 400px;
+        /* Adjust the max-width as needed */
+
+    }
+
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .column {
+        flex: 0 0 48%;
+        /* Adjust the width as needed */
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: Kanit;
+    }
+
+    .gender-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 52%;
+        /* Adjust left as needed */
+    }
+
+    .gender-row label {
+        display: block;
+        text-align: center;
+        margin: 0 5px;
+        /* Adjust margin as needed */
+    }
+
+    #button_container {
+        text-align: center;
+        margin-top: 20px;
+        /* Add margin to separate the button from the form */
+    }
+
+    #register {
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Kanit;
+    }
+
+    #register:hover {
+        background-color: #7b7b7b;
+    }
+}

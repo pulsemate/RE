@@ -1,0 +1,260 @@
+.green {
+    --white: #ffffff;
+    --body: #28BC66;
+    --light:#2ce871;
+    --dark:#28BC66;
+    #circlelogo{
+        display: none;
+    }
+    #errorlogo{
+        display: none;
+    }
+    .welcometext{
+        display: none;
+    }
+    .errortext{
+        display: none;
+    }
+}
+.red {
+    --white: #ffffff;
+    --body: #FF3131;
+    --light:#de6969;
+    --dark:#FF3131;
+    #circlelogo{
+        display: none;
+    }
+    #errorlogo{
+        display: none;
+    }
+    .welcometext{
+        display: none;
+    }
+    .errortext{
+        display: none;
+    }
+}
+.yellow {
+    --white: #ffffff;
+    --body: #F4E135;
+    --light:#FFF48F;
+    --dark:#F4E135;
+    #circlelogo{
+        display: none;
+    }
+    #errorlogo{
+        display: none;
+    }
+    .welcometext{
+        display: none;
+    }
+    .errortext{
+        display: none;
+    }
+}
+.error{
+    --body:rgb(244, 19, 19);
+    #circlelogo{
+        display: none;
+    }
+    .sugg{
+        
+        visibility: hidden;
+        
+    }
+    .status{
+        visibility: hidden;
+    }
+    .circle span{
+        visibility: hidden;
+    }
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        /* ปรับขนาดตามต้องการ */
+        height: 150px;
+        
+        position: relative;
+    }
+
+    #pressure {
+        position: absolute;
+        bottom: 10px; /* Adjust as needed */
+        text-align: center;
+        width: 100%;
+    }
+    .welcometext{
+        display: none;
+    }
+    .errortext{
+    text-align: center; /* Center text */
+}
+
+.welcome, .welcome2 {
+    margin: 0; /* Remove default margin */
+}
+
+}
+.idle{
+    --body:rgb(176, 255, 255);
+    #errorlogo{
+        display: none;
+    }
+    .sugg{
+        
+        visibility: hidden;
+        
+    }
+    .status{
+        visibility: hidden;
+    }
+    .circle span{
+        visibility: hidden;
+    }
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        /* ปรับขนาดตามต้องการ */
+        height: 150px;
+        border: 1px solid black; /* Optional, just to see the div's boundary */
+        position: relative;
+    }
+
+    #pressure {
+        position: absolute;
+        bottom: 10px; /* Adjust as needed */
+        text-align: center;
+        width: 100%;
+    }
+    .welcometext {
+        
+        text-align: center; /* Center text */
+    }
+
+    .welcome, .welcome2 {
+        margin: 0; /* Remove default margin */
+    }
+    .errortext{
+        display: none;
+    }
+}
+
+
+@media (min-width: 1920px) {
+* {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#clock {
+    font-size: 2rem;
+    padding: 40px;
+}
+
+body {
+    font-family: Kanit;
+    background-color: var(--body);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.circle {
+    margin: 20px;
+    position: relative;
+    width: 150px;
+    /* ปรับขนาดตามต้องการ */
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--body) 20%, var(--light) 80%);
+}
+
+.circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* ใช้ flexbox เพื่อจัดวางข้อความให้ตรงกลาง */
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    /* เพิ่มความชัดเจนให้กับข้อความ */
+}
+
+.background {
+    border-radius: 5px;
+    border: 1px solid white;
+    z-index: -1;
+    top: 17%;
+    position: absolute;
+    padding: 50px 300px;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+   
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+.stat{
+    padding-top: 150px;
+    font-size: 2rem;
+}
+.status{
+    display: flex;
+    flex-direction: column;
+}
+#sys,#dia,#pul{
+    display: flex;
+    justify-content: space-between;
+}
+.sugg{
+    /* width: 120%; */
+    font-size: 1rem;
+    margin-top: 10px;
+  
+    
+}
+.funct_but{
+    
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+button{
+    color: black;
+    margin: 30px;
+    width: 20%;
+    height: 2rem;
+    
+}
+a {
+    color: black;
+    text-decoration: none;
+  }
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+}

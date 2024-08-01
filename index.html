@@ -3,73 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PulseMate</title>
-    <link rel="stylesheet" href="../styles/mobileS.css">
-    <link rel="stylesheet" href="../styles/mobileM.css">
-    <link rel="stylesheet" href="../styles/mobileL.css">
-    <link rel="stylesheet" href="../styles/ipad_ipadmini_ipadair_ipadpro_Port.css">
-    <link rel="stylesheet" href="../styles/ipad_ipadmini_ipadair_ipadpro_land.css">
-    <link rel="stylesheet" href="../styles/laptopS.css">
-    <link rel="stylesheet" href="../styles/laptopM.css">
-    <link rel="stylesheet" href="../styles/screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../login/logincss/loginmobile.css">
+    <link rel="stylesheet" href="../login/logincss/loginScreen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" href="Pic/favicon2.ico" type="image/x-icon">
 </head>
+
 <body>
-    <header>
-        <!-- ส่วนนี้ต้องแก้ใช้ firebase เข้ามาช่วย -->
-        <h1>ยินดีต้อนรับคุณ: พรเกียรติ รอบคอบฟหก</h1>
-        <button id="log_out">ออกจากระบบ</button>
-    </header>
-    <header1>
-        <img src="../pics/logo_long.png" id="logolong">
-        <caution>
-            <h1>ข้อมูลเตรียมตัวก่อนวัดความดัน</h1>
-        </caution>
-    </header1>
+    <div>
+        <img id="img1" src="../pics/UI_website__1_-removebg-preview (1).png">
+    </div>
+    <div id="container">
+        <div id="form_container">
+            <!-- Sign-in form elements go here -->
+            <p id="welcomee">ยินดีให้บริการ</p>
+            <p id="welcome">กรุณาเข้าสู่ระบบ</p>
+            <input placeholder="Email" type="text" id="signin-email" />
+            <input placeholder="Password" type="password" id="signin-password" />
+        </div>
 
-    <main>
+        <div id="button_container">
+            <button id="signin" onclick="signin()"> เข้าสู่ระบบ </button>
+        </div>
+        <div id="signin-link-container">
+            <p>ลงทะเบียนเพื่อเข้าสู่ระบบ <a href="../register/register.html">ลงทะเบียน </a></p>
+        </div>
+    </div>
 
-        <div class="info">
-            <div class="info1">
-                <h2 class="text">การวัดตอนเช้า</h2>
-                <p>วัดช่วงเช้า วัดความดันภายใน 1 ชั่วโมง <br>หลังตื่นนอน และปัสสาวะแล้ว จำนวน 2 ครั้ง <br>ติดกัน ห่างกันครั้งละ 1 นาที</p>
-            </div>
-            <div class="info2">
-                <h2 class="text">การวัดก่อนเข้านอน</h2>
-                <p>วัดช่วงเวลาก่อนเข้านอน วัดความดัน 2 ครั้ง <br>
-                    ติดกันห่างกันครั้งละ 1 นาที</p>
-            </div>
-        </div>
-        <div class="infomain">
-            
-                <img src="../pics/infopic.png" id="pressure">
-            
-            <div class="main-content">
-                <section>
-                    <p class="rule">
-                        <h2>ทำการวัดดังนี้</h2>
-                        ● นั่งเก้าอี้ให้หลังพิงพนักและหลังตรง 
-                        <br>● เท้าวางราบกับพื้นไม่ไขว่ห้าง 
-                        <br>● วางแขนในระดับเดียวกับหัวใจ 
-                        <br>● ขณะวัดความดันโลหิตไม่กำมือ ไม่พุดคุย หรือ ขยับตัว
-                        <br> ● ก่อนทำการวัด นั่งพักอย่างผ่อนคลาย
-                    </p>
-                </section>
-            </div>
-        </div>
-        <div class="func_button">
-            <button class="but1">
-                ข้อมูลย้อนหลัง</button>
-            <button class="but2"><a href="../html/pressure.html">วัดความดัน</a></button>
-            <button class="but3">เกี่ยวกับเรา</button>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; PulseMate By KMITL IoTe group</p>
-    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- Your Firebase Configuration -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBGGdqJxgpT5PZQnigaVFS-OfMD-jJxjGQ",
+            authDomain: "authentication-app-2043f.firebaseapp.com",
+            databaseURL: "https://authentication-app-2043f-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "authentication-app-2043f",
+            storageBucket: "authentication-app-2043f.appspot.com",
+            messagingSenderId: "1083690050567",
+            appId: "1:1083690050567:web:6c79d9fcd23a626b56f6a2",
+            measurementId: "G-FTR73XSRW6"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your signin.js script -->
+    <script src="../login/index.js"></script>
 </body>
-
 </html>

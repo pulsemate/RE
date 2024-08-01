@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="green">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    
+    <link rel="stylesheet" href="../dashboard/dashboardcss/ipad_lands.css">
+    <link rel="stylesheet" href="../dashboard/dashboardcss/ipad_portraits.css">
+    <link rel="stylesheet" href="../dashboard/dashboardcss/mobilePL.css">
+    <link rel="stylesheet" href="../dashboard/dashboardcss/mobilePM.css">
+    <link rel="stylesheet" href="../dashboard/dashboardcss/mobilePS.css">
+    <link rel="stylesheet" href="../dashboard/dashboardcss/screen_pressure.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="user-info">ผู้ใช้งานปัจจุบัน:</h1>
+        <!-- <img src="../pics/logo_long.png" id="pulse"> -->
+        <div id="clock"></div>
+        <script src="../clock/clock.js" defer></script>
+    </header>
+    <main>
+        <div class="circle">
+            <img src="../pics/circlelogo.png" id="circlelogo">
+            <img src="../pics/error (1).png" id="errorlogo">
+            <span id="pressure">ปกติ</span>
+        </div>
+    </main>
+    <section>
+        <div class="errortext">
+            <h1>เกิดข้อบกพร่องกรุณาลองใหม่</h1>
+        </div>
+        <div class="welcometext">
+        <h1 class="welcome">PulseMate <br></h1>
+        <h1 class="welcome2">ยินดีให้บริการ</h1>
+        </div>
+        <div class="background">
+            
+            <div class="status">
+                
+                <h1 class="stat">ผลการวัดความดันได้ดังนี้</h1>
+                <div id="sys">
+                    <h2>&nbsp;&nbsp;ค่าความดันขณะหัวใจบีบตัว</h2>
+                    <h2 id="sysint">123 mmHg</h2>
+                </div>
+                <div id="dia">
+                    <h2>&nbsp;&nbsp;ค่าความดันขณะหัวใจคลายตัว</h2>
+                    <h2 id="diaint">123 mmHg</h2>
+                </div>
+                <div id="pul">
+                    <h2>&nbsp;&nbsp;อัตราการเตันของหัวใจ</h2>
+                    <h2 id="pulint">123 &nbsp;&nbsp;&nbsp;/&nbsp;Min</h2>
+                </div>
+            </div>
+            <div class="sugg">
+                <h1>คำแนะนำ :</h1>
+                <h1>หลีกเลี่ยงการดื่ทแอลกอฮอล์รับประทานอาหารที่มีประโยชน์สารอาหารครบถ้วนหลีกเลี่ยงการดื่ทแอลกอฮอล์รับประทานอาหารที่มีประโยชน์สารอาหารครบถ้วน</h1>
+
+            </div>
+
+            <div class="funct_but">
+                <button class="butp1" onclick="window.location.href='../main/main.html'">ย้อนกลับ</a></button>
+                <button class="butp2">ข้อมูลย้อนหลัง</button>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- Your Firebase Configuration -->
+    <script src="../dashboard/dashboard.js"></script>
+
+    
+    <script>
+        // Additional error logging for debugging
+        console.log("Firebase initialized on dashboard.html");
+
+        // Listen for changes in the user's sign-in state
+        firebase.auth().onAuthStateChanged(function (user) {
+            // Call the function to display user information
+            displayUserInfo(user);
+        });
+    </script>
+</body>
+</html>

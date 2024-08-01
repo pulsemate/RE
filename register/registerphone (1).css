@@ -1,0 +1,326 @@
+@media only screen and (min-width: 350px) and (max-width: 428px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+        margin: 0;
+        font-family: Kanit;
+        overflow: hidden;
+
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #form_container {
+        padding: 7.5px;
+        /* 25% smaller padding */
+        border-radius: 5px;
+        /* 25% smaller border-radius */
+        box-shadow: 0 0 7.5px rgba(0, 0, 0, 0);
+        /* Adjusted box-shadow */
+        width: 60%;
+        /* 25% smaller width */
+        max-width: 262.5px;
+        /* 25% smaller max-width */
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3.75px;
+        /* 25% smaller margin-bottom */
+    }
+
+    .column {
+        flex: 0 0 40%;
+        /* 25% smaller width */
+    }
+
+    label {
+        margin-top: 3.75px;
+        /* 25% smaller margin-top */
+    }
+
+    input {
+        width: 100%;
+        padding: 2.25px;
+        /* 25% smaller padding */
+        margin-top: 1.875px;
+        /* 25% smaller margin-top */
+        box-sizing: border-box;
+        border: 0.75px solid #ccc;
+        /* 25% smaller border thickness */
+        border-radius: 1.5px;
+        /* 25% smaller border-radius */
+        font-family: Kanit;
+    }
+
+    .gender-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        /* Adjusted left */
+        transform: translateX(-50%);
+        /* Centered the element */
+    }
+
+    .gender-row label {
+        display: block;
+        text-align: center;
+        margin: 0 1.5px;
+        /* 25% smaller margin */
+    }
+
+    #button_container {
+        text-align: center;
+        margin-top: 5.625px;
+        /* 25% smaller margin-top */
+    }
+
+    #register {
+        color: rgb(0, 0, 0);
+        padding: 5px 15px;
+        /* Increased padding */
+        font-size: 15px;
+        /* Increased font-size */
+        border: 0.75px solid #000000;
+        /* 25% smaller border thickness */
+        border-radius: 1.5px;
+        /* 25% smaller border-radius */
+        cursor: pointer;
+        font-family: Kanit;
+    }
+
+    #register:hover {
+        background-color: #7b7b7b;
+    }
+}
+
+/* ipad */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        font-family: Kanit;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #form_container {
+        padding: 25px;
+        /* Increased padding */
+        border-radius: 15px;
+        /* Increased border-radius */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+        /* Adjusted box-shadow */
+        width: 80%;
+        /* Increased width */
+        max-width: 400px;
+        /* Increased max-width */
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        /* Increased margin-bottom */
+    }
+
+    .column {
+        flex: 0 0 45%;
+        /* Increased width */
+    }
+
+    label {
+        margin-top: 15px;
+        /* Increased margin-top */
+    }
+
+    input {
+        width: 100%;
+        padding: 7.5px;
+        /* Increased padding */
+        margin-top: 6.25px;
+        /* Increased margin-top */
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        /* Increased border thickness */
+        border-radius: 4px;
+        /* Increased border-radius */
+        font-family: Kanit;
+    }
+
+    .gender-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gender-row label {
+        display: block;
+        text-align: center;
+        margin: 0 3px;
+        /* Increased margin */
+    }
+
+    #button_container {
+        text-align: center;
+        margin-top: 20px;
+        /* Increased margin-top */
+    }
+
+    #register {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 6px 15px;
+        /* Increased padding */
+        font-size: 20px;
+        /* Increased font-size */
+        border: 2px solid #000000;
+        /* Increased border thickness */
+        border-radius: 4px;
+        /* Increased border-radius */
+        cursor: pointer;
+        font-family: Kanit;
+    }
+
+    #register:hover {
+        background-color: #7b7b7b;
+    }
+}
+
+/* ipad horizontal */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        font-family: Kanit;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-top: -20px;
+        /* Increased negative margin to move everything up */
+    }
+
+    #form_container {
+        padding: 15px;
+        /* Decreased padding */
+        border-radius: 8px;
+        /* Decreased border-radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+        /* Decreased box-shadow */
+        width: 70%;
+        /* Decreased width */
+        max-width: 300px;
+        /* Decreased max-width */
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        /* Decreased margin-bottom */
+    }
+
+    .column {
+        flex: 0 0 40%;
+        /* Decreased width */
+    }
+
+    label {
+        margin-top: 8px;
+        /* Decreased top margin */
+    }
+
+    input {
+        width: 100%;
+        padding: 5px;
+        /* Decreased padding */
+        margin-top: 5px;
+        /* Decreased margin-top */
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        /* Decreased border thickness */
+        border-radius: 3px;
+        /* Decreased border-radius */
+        font-family: Kanit;
+    }
+
+    .gender-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gender-row label {
+        display: block;
+        text-align: center;
+        margin: 0 2px;
+        /* Decreased margin */
+    }
+
+    #button_container {
+        text-align: center;
+        margin-top: 10px;
+        /* Decreased margin-top */
+    }
+
+    #register {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 4px 10px;
+        /* Decreased padding */
+        font-size: 16px;
+        /* Decreased font-size */
+        border: 1px solid #000000;
+        /* Decreased border thickness */
+        border-radius: 3px;
+        /* Decreased border-radius */
+        cursor: pointer;
+        font-family: Kanit;
+    }
+
+    #register:hover {
+        background-color: #7b7b7b;
+    }
+}

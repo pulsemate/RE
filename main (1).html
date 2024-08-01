@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>PulseMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Pic/favicon2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mainphone.css">
+</head>
+
+<body>
+    <a id="pulse" href="../dashboard/dashboard.html">วัดความดัน</a>
+    <a id="data"
+        href="https://docs.google.com/spreadsheets/d/1_kBuaN78tLVgqU_tSrB6dO4Kq37MLrghEaE3kUYSU98/edit?usp=sharing">ข้อมูลย้อนหลัง</a>
+    <a id="aboutus" href="../about/aboutus.html">เกี่ยวกับเรา</a>
+
+    <!-- Display current user information -->
+    <div id="user-info-container">
+        <p id="user-info"></p>
+        <!-- Add Logout button -->
+        <button id="logout-btn" onclick="logout()">ออกจากระบบ</button>
+    </div>
+
+    <img id="logo" src="../Pic/UI_website__1_-removebg-preview.png">
+    <p id="info">ข้อมูลเตรียมตัวก่อนทำการวัดความดัน</p>
+
+
+    <div class="box" id="box1">วัดช่วงเช้า
+        วัดความดันภายใน 1 ชั่วโมง <br>หลังตื่นนอน และปัสสาวะแล้ว
+        จำนวน 2 ครั้ง<br> ติดกัน ห่างกันครั้งละ 1 นาที</div>
+    <div class="box" id="box2">วัดช่วงเวลาก่อนเข้านอน
+        วัดความดัน 2 ครั้ง<br> ติดกันห่างกันครั้งละ 1 นาที</div>
+    <img id="measure" src="../Pic/pulsemeasure-removebg-preview.png">
+    <p id="info2">
+        ● นั่งเก้าอี้ให้หลังพิงพนักและหลังตรง<br>
+        ● เท้าวางราบกับพื้นไม่ไขว่ห้าง<br>
+        ● วางแขนในระดับเดียวกับหัวใจ<br>
+        ● ขณะวัดความดันโลหิตไม่กำมือ <br>ไม่พุดคุย หรือ ขยับตัว<br>
+        ● ก่อนทำการวัด นั่งพักอย่างผ่อนคลาย
+    </p>
+    <!-- ... (other dashboard content) ... -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- Your Firebase Configuration -->
+    <script src="script.js"></script>
+
+    <!-- Your signin.js script -->
+    <script src="index.js"></script>
+
+    <script>
+        // Additional error logging for debugging
+        console.log("Firebase initialized on dashboard.html");
+
+        // Listen for changes in the user's sign-in state
+        firebase.auth().onAuthStateChanged(function (user) {
+            // Call the function to display user information
+            displayUserInfo(user);
+        });
+    </script>
+
+    <script>
+        // Function to handle logout
+        function logout() {
+            firebase.auth().signOut().then(function () {
+                // Sign-out successful.
+                // alert('ออกจากระบบสำเร็จ');
+                // Redirect to signin.html after successful logout
+                window.location.href = '../index.html';
+            }).catch(function (error) {
+                // An error happened.
+                console.error('Logout failed:', error);
+                alert('Logout failed: ' + error.message);
+            });
+        }
+    </script>
+</body>
+
+</html>
