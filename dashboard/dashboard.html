@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="green">
+<html lang="en" class="idle">
 
 <head>
     <meta charset="UTF-8">
@@ -77,18 +77,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
 
     <!-- Your Firebase Configuration -->
+    <script src="./dashboardfuncs.js"></script>
     <script src="../dashboard/dashboard.js"></script>
-
     
-    <script>
-        // Additional error logging for debugging
-        console.log("Firebase initialized on dashboard.html");
-
-        // Listen for changes in the user's sign-in state
-        firebase.auth().onAuthStateChanged(function (user) {
-            // Call the function to display user information
-            displayUserInfo(user);
-        });
-    </script>
 </body>
 </html>
