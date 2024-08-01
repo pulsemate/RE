@@ -39,4 +39,5 @@ function displayUserInfo(user) {
 firebase.auth().onAuthStateChanged(function (user) {
     displayUserInfo(user);
     if (user) setupOnline(user);
+    else window.location.replace("../index.html");
 });
