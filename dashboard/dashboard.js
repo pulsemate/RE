@@ -9,6 +9,7 @@ var firebaseConfig = {
     measurementId: "G-FTR73XSRW6"
 };
 firebase.initializeApp(firebaseConfig);
+
 function displayUserInfo(user) {
     var userInfoElement = document.getElementById('user-info');
 
@@ -37,4 +38,5 @@ function displayUserInfo(user) {
 
 firebase.auth().onAuthStateChanged(function (user) {
     displayUserInfo(user);
+    if (user) setupOnline(user);
 });
