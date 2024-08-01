@@ -1,0 +1,117 @@
+@media (min-width: 1420px) {
+    * {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    html,
+    body {
+        font-family: Kanit;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+    }
+
+    section {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .longlogo,
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutus {
+        padding: 18px;
+        border: 1px black solid;
+        text-align: left;
+        width: 52%;
+    }
+
+    .info {
+        font-size: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        font-size: 0.5rem
+    }
+
+    gallery,gallery1{
+        margin-top: 50px;
+       
+        
+    }
+    gallery{
+        margin-top: 1%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    gallery1{
+        margin-top: -10%;
+        display: flex;
+        justify-content: center;
+    }
+    .profile-container1 {
+        text-align: center;
+        margin: 20px;
+        margin-top: 1%;
+    }
+
+    /* pai */
+    .profile-container2 {
+        text-align: center;
+        margin: 20px;
+        margin-top: 1%;
+    }
+
+    /* ong */
+    .profile-container3 {
+        text-align: center;
+        margin: 20px;
+        margin-top: 1%;
+    }
+
+    /* kane */
+    .profile-container4 {
+        text-align: center;
+        margin: 20px;
+        margin-top: 9%;
+        
+    }
+
+    /* bud */
+    .profile-container5 {
+        text-align: center;
+        margin: 20px;
+        margin-top: 9%;
+    }
+
+    .name {
+        margin-top: 5px;
+        /* Adjust the margin as needed */
+        font-family: Kanit;
+        font-size: 14px;
+        /* Adjust the font size as needed */
+    }
+
+    .pfp {
+        border-radius: 50%;
+        width: 100px;
+        height: 110px;
+    }
+}
+    
+
+

@@ -138,7 +138,7 @@
 
     #img1 {
         width: 85%; /* Adjusted width */
-        height: 30%; /* Adjusted height */
+        height: auto; /* Adjusted height */
         position: fixed;
         bottom: 60%; /* Adjusted position */
         left: 10%; /* Adjusted position */

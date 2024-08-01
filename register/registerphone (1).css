@@ -246,7 +246,7 @@
         /* Decreased border-radius */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0);
         /* Decreased box-shadow */
-        width: 70%;
+        width: 90%;
         /* Decreased width */
         max-width: 300px;
         /* Decreased max-width */
@@ -260,7 +260,7 @@
     }
 
     .column {
-        flex: 0 0 40%;
+        flex: 0 0 45%;
         /* Decreased width */
     }
 
@@ -322,5 +322,9 @@
 
     #register:hover {
         background-color: #7b7b7b;
+    }
+    
+    label{
+        font-size: 2rem
     }
 }
