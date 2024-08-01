@@ -108,7 +108,7 @@
     .pfp {
         border-radius: 50%;
         width: 80px;
-        height: 90px;
+        aspect-ratio: 1;
     }
 }
 /* ipad pro */
@@ -221,7 +221,7 @@
     .pfp {
         border-radius: 50%;
         width: 110px;
-        height: 130px;
+        aspect-ratio: 1;
     }
 }
 /* ipad air */
@@ -333,7 +333,7 @@
     .pfp {
         border-radius: 50%;
         width: 100px;
-        height: 110px;
+        aspect-ratio: 1;
     }
 }
 
