@@ -32,6 +32,7 @@ const setupOnline = (user) => {
 							"https://pulsemate-backend.vercel.app/setId?name=" +
 								thisName
 						);
+                        return;
 					}
 					console.log(data);
 					const pageStatusElement =
@@ -56,7 +57,7 @@ const setupOnline = (user) => {
 							document.getElementById("suggest").innerText =
 								"ยินดีด้วย คุณความดันปกติ";
 						} else {
-							pageStatusElement.classList.add("yello");
+							pageStatusElement.classList.add("yellow");
 							document.getElementById("suggest").innerText =
 								"หลีกเลี่ยงการดื่มแอลกอฮอล์ <br> ทานอาหารที่มีประโยชน์สารอาหารครบถ้วน <br> ไม่ควรเปลี่ยนท่าทางอย่างรวดเร็วมากเกินไป";
 						}
