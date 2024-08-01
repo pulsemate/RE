@@ -27,6 +27,11 @@ const setupOnline = (user) => {
 							clearInterval(myInterval);
 							return;
 						}
+					} else {
+						fetch(
+							"https://pulsemate-backend.vercel.app/setId?name=" +
+								thisName
+						);
 					}
 					console.log(data);
 					const pageStatusElement =
