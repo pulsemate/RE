@@ -51,7 +51,7 @@ const setupOnline = (user) => {
 						try {
 							const data = JSON.parse(http.responseText);
 							console.log(data);
-							if (!data.user && !sented) {
+							if (!data.user) {
 								// fetch(
 								// 	"http://localhost:3000/setId?name=" +
 								// 		thisName
