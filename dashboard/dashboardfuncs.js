@@ -10,7 +10,7 @@ const setupOnline = (user) => {
 		const first = setInterval(() => {
 			var done = false;
 			const http = new XMLHttpRequest();
-			const url = "http://pulsemate-backend.vercel.app/getData";
+			const url = "https://pulsemate-backend.vercel.app/getData";
 			http.open("GET", url);
 			http.send();
 			http.onreadystatechange = (e) => {
