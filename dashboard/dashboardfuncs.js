@@ -6,6 +6,7 @@ const setupOnline = (user) => {
 		var userData = snapshot.val();
 		const thisName = userData ? userData.name + " " + userData.surname : "";
 		fetch("https://pulsemate-backend.vercel.app/setId?name=" + thisName);
+		fetch("https://pulsemate-backend.vercel.app/node/resetData");
 		// fetch("http://localhost:3000/setId?name=" + thisName);
 		const first = setInterval(() => {
 			var done = false;
