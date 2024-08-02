@@ -104,6 +104,7 @@
 
     .pfp {
         border-radius: 50%;
+        aspect-ratio: 1;
         width: 50px;
         aspect-ratio: 1;
     }
