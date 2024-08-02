@@ -19,11 +19,11 @@ const setupOnline = (user) => {
 					try {
 						const data = JSON.parse(http.responseText);
 						console.log(data);
-						if (!data.user)
-							fetch(
-								"https://pulsemate-backend.vercel.app/setId?name=" +
-									thisName
-							);
+						// if (!data.user)
+						// 	fetch(
+						// 		"https://pulsemate-backend.vercel.app/setId?name=" +
+						// 			thisName
+						// 	);
 						// fetch(
 						// 	"http://localhost:3000/setId?name=" + thisName
 						// );
