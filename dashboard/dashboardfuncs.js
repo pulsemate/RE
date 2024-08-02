@@ -20,11 +20,12 @@ const setupOnline = (user) => {
 						console.log(data);
 						if (!data.user)
 							fetch(
-								"https://pulsemate-backend.vercel.app/setId?name=" + thisName
+								"https://pulsemate-backend.vercel.app/setId?name=" +
+									thisName
 							);
-							// fetch(
-							// 	"http://localhost:3000/setId?name=" + thisName
-							// );
+						// fetch(
+						// 	"http://localhost:3000/setId?name=" + thisName
+						// );
 						if (data.user.name == thisName) {
 							if (data.userCount < 2) {
 								clearInterval(first);
@@ -35,6 +36,8 @@ const setupOnline = (user) => {
 					} catch {}
 			};
 		}, 1000);
+
+		let sented = false;
 
 		const main = () => {
 			console.log("main");
@@ -48,20 +51,33 @@ const setupOnline = (user) => {
 						try {
 							const data = JSON.parse(http.responseText);
 							console.log(data);
-							if (!data.user) {
+							if (!data.user && !sented) {
 								// fetch(
 								// 	"http://localhost:3000/setId?name=" +
 								// 		thisName
 								// );
-								fetch(
-									"https://pulsemate-backend.vercel.app/setId?name=" +
-										thisName
-								);
+								if (!sented) {
+									sented = true;
+									const ado = new XMLHttpRequest();
+									http.open(
+										"GET",
+										"https://pulsemate-backend.vercel.app/setId?name=" +
+											thisName
+									);
+									http.onreadystatechange((e) => {
+										if (http.readyState == 4)
+											sented = false;
+									});
+									http.send();
+								}
+
 								return;
 							} else if (data.userCount > 1) {
 								clearInterval(myInterval);
-								fetch("https://pulsemate-backend.vercel.app/unsetId").then(
-								// fetch("http://localhost:3000/unsetId").then(
+								fetch(
+									"https://pulsemate-backend.vercel.app/unsetId"
+								).then(
+									// fetch("http://localhost:3000/unsetId").then(
 									window.location.replace("../main/main.html")
 								);
 							}
