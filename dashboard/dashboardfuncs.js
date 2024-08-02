@@ -47,6 +47,7 @@ const setupOnline = (user) => {
 					if (http.readyState == 4)
 						try {
 							const data = JSON.parse(http.responseText);
+							console.log(data);
 							if (!data.user) {
 								// fetch(
 								// 	"http://localhost:3000/setId?name=" +
@@ -64,7 +65,6 @@ const setupOnline = (user) => {
 									window.location.replace("../main/main.html")
 								);
 							}
-							console.log(data);
 							const pageStatusElement =
 								document.getElementsByTagName("html")[0];
 							pageStatusElement.classList.remove(
