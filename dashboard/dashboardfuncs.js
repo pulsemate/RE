@@ -99,17 +99,20 @@ const setupOnline = (user) => {
 									data.pul;
 								if (data.sys > 140 || data.dia > 90) {
 									pageStatusElement.classList.add("red");
+									document.getElementById("pressure").innerHTML = "สูง";
 									document.getElementById(
 										"suggest"
 									).innerHTML =
 										"หลีกเลี่ยงอาหารรสเค็ม<br>งดสูบบุหรี่<br>งดดื่มแอลกอฮอ์";
 								} else if (data.sys > 100 || data.dia > 70) {
 									pageStatusElement.classList.add("green");
+									document.getElementById("pressure").innerHTML = "ปกติ";
 									document.getElementById(
 										"suggest"
 									).innerHTML = "ยินดีด้วย คุณความดันปกติ";
 								} else {
 									pageStatusElement.classList.add("yellow");
+									document.getElementById("pressure").innerHTML = "ต่ำ";
 									document.getElementById(
 										"suggest"
 									).innerHTML =
