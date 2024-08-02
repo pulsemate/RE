@@ -105,7 +105,7 @@
     .pfp {
         border-radius: 50%;
         width: 120px;
-        height: 130px;
+        aspect-ratio: 1;
     }
 }
 @media (min-width: 712px) and (max-width: 820px) and (min-height:1180px){
@@ -215,7 +215,7 @@
     .pfp {
         border-radius: 50%;
         width: 120px;
-        height: 130px;
+        aspect-ratio: 1;
     }
 }
 @media (min-width: 1023px) and (max-width:1366px)and (min-height :1366px){
@@ -326,7 +326,7 @@
     .pfp {
         border-radius: 50%;
         width: 120px;
-        height: 130px;
+        aspect-ratio: 1;
     }
 }
 
