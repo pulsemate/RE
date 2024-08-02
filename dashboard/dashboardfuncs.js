@@ -105,7 +105,7 @@ const setupOnline = (user) => {
 						} catch {}
 				};
 				http.send();
-			}, 1000);
+			}, 100);
 		};
 	});
 };
