@@ -155,6 +155,7 @@
     }
 
     label {
+        
         margin-top: 15px;
         /* Increased margin-top */
     }
@@ -217,6 +218,116 @@
 
 /* ipad horizontal */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        font-family: Kanit;
+        background: rgb(155, 231, 255);
+        background: linear-gradient(0deg, rgba(155, 231, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(155, 231, 255, 1) 100%);
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-top: -20px;
+        /* Increased negative margin to move everything up */
+    }
+
+    #form_container {
+        padding: 15px;
+        /* Decreased padding */
+        border-radius: 8px;
+        /* Decreased border-radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+        /* Decreased box-shadow */
+        width: 90%;
+        /* Decreased width */
+        max-width: 300px;
+        /* Decreased max-width */
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        /* Decreased margin-bottom */
+    }
+
+    .column {
+        flex: 0 0 45%;
+        /* Decreased width */
+    }
+
+    label {
+        margin-top: 8px;
+        /* Decreased top margin */
+    }
+
+    input {
+        width: 100%;
+        padding: 5px;
+        /* Decreased padding */
+        margin-top: 5px;
+        /* Decreased margin-top */
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        /* Decreased border thickness */
+        border-radius: 3px;
+        /* Decreased border-radius */
+        font-family: Kanit;
+    }
+
+    .gender-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gender-row label {
+        display: block;
+        text-align: center;
+        margin: 0 2px;
+        /* Decreased margin */
+    }
+
+    #button_container {
+        text-align: center;
+        margin-top: 10px;
+        /* Decreased margin-top */
+    }
+
+    #register {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 4px 10px;
+        /* Decreased padding */
+        font-size: 16px;
+        /* Decreased font-size */
+        border: 1px solid #000000;
+        /* Decreased border thickness */
+        border-radius: 3px;
+        /* Decreased border-radius */
+        cursor: pointer;
+        font-family: Kanit;
+    }
+
+    #register:hover {
+        background-color: #7b7b7b;
+    }
+    
+    
+}
+@media (min-width: 1180px) and (max-width:1367px)and (min-height :1023px){
     body {
         margin: 0;
         padding: 0;
