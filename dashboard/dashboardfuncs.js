@@ -5,12 +5,12 @@ const setupOnline = (user) => {
 	userRef.once("value").then((snapshot) => {
 		var userData = snapshot.val();
 		const thisName = userData ? userData.name + " " + userData.surname : "";
-		// fetch("https://pulsemate-backend.vercel.app/setId?name=" + thisName);
-		fetch("http://localhost:3000/setId?name=" + thisName);
+		fetch("https://pulsemate-backend.vercel.app/setId?name=" + thisName);
+		// fetch("http://localhost:3000/setId?name=" + thisName);
 		const first = setInterval(() => {
 			var done = false;
 			const http = new XMLHttpRequest();
-			const url = "http://localhost:3000/getData";
+			const url = "http://pulsemate-backend.vercel.app/getData";
 			http.open("GET", url);
 			http.send();
 			http.onreadystatechange = (e) => {
@@ -20,8 +20,11 @@ const setupOnline = (user) => {
 						console.log(data);
 						if (!data.user)
 							fetch(
-								"http://localhost:3000/setId?name=" + thisName
+								"https://pulsemate-backend.vercel.app/setId?name=" + thisName
 							);
+							// fetch(
+							// 	"http://localhost:3000/setId?name=" + thisName
+							// );
 						if (data.user.name == thisName) {
 							if (data.userCount < 2) {
 								clearInterval(first);
@@ -37,16 +40,20 @@ const setupOnline = (user) => {
 			console.log("main");
 			const myInterval = setInterval(() => {
 				const http = new XMLHttpRequest();
-				// const url = "https://pulsemate-backend.vercel.app/getData";
-				const url = "http://localhost:3000/getData";
+				const url = "https://pulsemate-backend.vercel.app/getData";
+				// const url = "http://localhost:3000/getData";
 				http.open("GET", url);
 				http.onreadystatechange = (e) => {
 					if (http.readyState == 4)
 						try {
 							const data = JSON.parse(http.responseText);
 							if (!data.user) {
+								// fetch(
+								// 	"http://localhost:3000/setId?name=" +
+								// 		thisName
+								// );
 								fetch(
-									"http://localhost:3000/setId?name=" +
+									"https://pulsemate-backend.vercel.app/setId?name=" +
 										thisName
 								);
 								return;
@@ -54,7 +61,8 @@ const setupOnline = (user) => {
 
 							if (data.userCount > 1) {
 								clearInterval(myInterval);
-								fetch("http://localhost:3000/unsetId").then(
+								fetch("https://pulsemate-backend.vercel.app/unsetId").then(
+								// fetch("http://localhost:3000/unsetId").then(
 									window.location.replace("../main/main.html")
 								);
 							}
