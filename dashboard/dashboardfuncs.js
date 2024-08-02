@@ -119,7 +119,7 @@ const setupOnline = (user) => {
 						} catch {}
 				};
 				http.send();
-			}, 100);
+			}, 500);
 		};
 	});
 };
