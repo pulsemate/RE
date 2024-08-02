@@ -57,9 +57,7 @@ const setupOnline = (user) => {
 										thisName
 								);
 								return;
-							}
-
-							if (data.userCount > 1) {
+							} else if (data.userCount > 1) {
 								clearInterval(myInterval);
 								fetch("https://pulsemate-backend.vercel.app/unsetId").then(
 								// fetch("http://localhost:3000/unsetId").then(
