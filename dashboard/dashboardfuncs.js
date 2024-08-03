@@ -84,21 +84,24 @@ const setupOnline = (user) => {
 								document.getElementById("pulint").innerText =
 									data.pul;
 								if (data.sys > 140 && data.dia > 90) {
+									document.getElementById("pressure").innerText = "สูง";
 									pageStatusElement.classList.add("red");
 									document.getElementById(
 										"suggest"
-									).innerText =
+									).innerHTML =
 										"หลีกเลี่ยงอาหารรสเค็ม<br>งดสูบบุหรี่<br>งดดื่มแอลกอฮอ์";
 								} else if (data.sys > 100 && data.dia > 50) {
+									document.getElementById("pressure").innerText = "ปกติ";
 									pageStatusElement.classList.add("green");
 									document.getElementById(
 										"suggest"
-									).innerText = "ยินดีด้วย คุณความดันปกติ";
+									).innerHTML = "ยินดีด้วย คุณความดันปกติ";
 								} else {
+									document.getElementById("pressure").innerText = "ต่ำ";
 									pageStatusElement.classList.add("yellow");
 									document.getElementById(
 										"suggest"
-									).innerText =
+									).innerHTML =
 										"หลีกเลี่ยงการดื่มแอลกอฮอล์ <br> ทานอาหารที่มีประโยชน์สารอาหารครบถ้วน <br> ไม่ควรเปลี่ยนท่าทางอย่างรวดเร็วมากเกินไป";
 								}
 							}
