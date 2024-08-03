@@ -83,14 +83,14 @@ const setupOnline = (user) => {
 									data.dia;
 								document.getElementById("pulint").innerText =
 									data.pul;
-								if (data.sys > 140 && data.dia > 90) {
+								if (data.sys > 140 || data.dia > 90) {
 									document.getElementById("pressure").innerText = "สูง";
 									pageStatusElement.classList.add("red");
 									document.getElementById(
 										"suggest"
 									).innerHTML =
 										"หลีกเลี่ยงอาหารรสเค็ม<br>งดสูบบุหรี่<br>งดดื่มแอลกอฮอ์";
-								} else if (data.sys > 100 && data.dia > 50) {
+								} else if (data.sys > 100 || data.dia > 50) {
 									document.getElementById("pressure").innerText = "ปกติ";
 									pageStatusElement.classList.add("green");
 									document.getElementById(
