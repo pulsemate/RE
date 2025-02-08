@@ -12,7 +12,6 @@ const setupOnline = (user) => {
 			const http = new XMLHttpRequest();
 			const url = "https://pulsemate-backend.vercel.app/getData";
 			http.open("GET", url);
-			http.send();
 			http.onreadystatechange = (e) => {
 				if (http.readyState == 4)
 					try {
@@ -25,15 +24,17 @@ const setupOnline = (user) => {
 							// fetch(
 							// 	"http://localhost:3000/setId?name=" + thisName
 							// );
-						if (data.user.name == thisName) {
-							if (data.userCount < 2) {
-								clearInterval(first);
-								main();
-							}
-						} else {
-						}
+						main();
+						// if (data.user.name == thisName) {
+						// 	if (data.userCount < 2) {
+						// 		clearInterval(first);
+						// 		main();
+						// 	}
+						// } else {
+						// }
 					} catch {}
 			};
+			http.send();
 		}, 1000);
 
 		const main = () => {
