@@ -59,13 +59,13 @@ const setupOnline = (user) => {
 								return;
 							}
 
-							if (data.userCount > 1) {
-								clearInterval(myInterval);
-								fetch("https://pulsemate-backend.vercel.app/unsetId").then(
-								// fetch("http://localhost:3000/unsetId").then(
-									window.location.replace("../main/main.html")
-								);
-							}
+							// if (data.userCount > 1) {
+							// 	clearInterval(myInterval);
+							// 	fetch("https://pulsemate-backend.vercel.app/unsetId").then(
+							// 	// fetch("http://localhost:3000/unsetId").then(
+							// 		window.location.replace("../main/main.html")
+							// 	);
+							// }
 							console.log(data);
 							const pageStatusElement =
 								document.getElementsByTagName("html")[0];
