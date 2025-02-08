@@ -25,6 +25,7 @@ const setupOnline = (user) => {
 							// 	"http://localhost:3000/setId?name=" + thisName
 							// );
 						main();
+
 						// if (data.user.name == thisName) {
 						// 	if (data.userCount < 2) {
 						// 		clearInterval(first);
@@ -35,6 +36,7 @@ const setupOnline = (user) => {
 					} catch {}
 			};
 			http.send();
+			clearInterval(first);
 		}, 1000);
 
 		const main = () => {
